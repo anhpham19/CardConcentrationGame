@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=card\ canvas
+comment0.target=void\ addCard(Card,\ objectdraw.DrawingCanvas)
+comment0.text=\n\ Create\ a\ card\ and\ put\ it\ into\ the\ next\ slot\ of\ the\ array.\n\ Make\ sure\ there\ is\ enough\ space\ first.\n
+comment1.params=
+comment1.target=void\ showCard()
+comment1.text=\n\ A\ method\ that\ walks\ through\ the\ collection\ of\ cards\ to\ show\ the\ symbol\ on\ the\ card.\n
+comment2.params=
+comment2.target=void\ hideCard()
+comment2.text=\n\ A\ method\ that\ walks\ through\ the\ collection\ of\ cards\ to\ hide\ the\ symbol\ on\ the\ card.\n
+comment3.params=point
+comment3.target=Card\ getCardAt(objectdraw.Location)
+comment3.text=\n\ A\ method\ that\ walks\ through\ the\ collection\ of\ cards\ to\ find\ the\ one\ containing\ the\ \n\ \ \ \ \ \ \ point\ and\ return\ it.\ \ If\ no\ card\ contains\ the\ point,\ return\ null.\n
+comment4.params=
+comment4.target=Card\ removeCard()
+comment4.text=\n\ A\ method\ that\ walks\ through\ the\ collection\ of\ cards\ to\ remove\ the\ card\ in\ the\n\ \ \ \ \ \ \ array\ from\ the\ canvas.\n
+numComments=5

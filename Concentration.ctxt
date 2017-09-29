@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ begin()
+comment0.text=\n\ The\ program\ starts\ with\ a\ display\ of\ the\ cards\ and\ the\ two\ buttons.\n
+comment1.params=
+comment1.target=void\ displayCards()
+comment1.text=\n\ Create\ the\ display\ of\ the\ cards.\ \n\ There\ are\ 36\ cards\ (6\ columns,\ 6\ rows).\ Each\ card\ contains\ a\ symbol\ and\ the\ symbols\ \n\ \ \ \ \ \ \ in\ the\ cards\ are\ randomly\ shuffled.\n
+comment2.params=
+comment2.target=void\ displayButtons()
+comment2.text=\n\ Display\ the\ two\ buttons.\n
+comment3.params=evt
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.text=\n\ When\ the\ user\ clicks\ on\ the\ "cheatButton"\ button,\ the\ symbols\ of\ all\ cards\ will\ appear.\n
+comment4.params=point
+comment4.target=void\ onMouseClick(objectdraw.Location)
+comment4.text=\n\ When\ the\ user\ clicks\ on\ a\ card,\ the\ symbol\ is\ displayed.\ \n\ When\ the\ user\ clicks\ on\ a\ second\ card,\ its\ symbol\ is\ also\ displayed.\n\ If\ the\ cards\ have\ the\ same\ symbol,\ on\ the\ next\ click\ both\ cards\ are\ re-moved\ from\ the\ display.\ \n\ If\ the\ cards\ have\ different\ symbols,\ they\ are\ both\ turned\ facedown\ again.\ \n
+numComments=5

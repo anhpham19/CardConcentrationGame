@@ -1,0 +1,36 @@
+------------------------------------------------------------------------
+This is the project README file. Here, you should describe your project.
+Tell the reader (someone who does not know anything about this project)
+all he/she needs to know. The comments should usually include at least:
+------------------------------------------------------------------------
+
+PROJECT TITLE:Concentration
+PURPOSE OF PROJECT:Develop a simple card game. The program starts with 36 cards on the screen. The cards come in pairs, where each card in a pair will contain the same symbol. The program will shuffle the cards and display them facedown. When the user clicks on a card, the symbol is displayed. When the user clicks on the second card, its symbol is also displayed. If the last two cards contain the same symbol, on the next click, both cards will be removed from the display. If the two cards have different symbols, they are both turned face down again. The goal is to remove all cards from the display in as few clicks as possible by remembering where they have seen the symbols.
+VERSION or DATE: April ? 2016
+HOW TO START THIS PROJECT:dev > cs101 > Lab7
+AUTHORS:Anh Chau Pham
+USER INSTRUCTIONS:Right click on Concentration class, click RunController
+
+PRE-LAB ASSIGNMENT:
+	1. Responsibilities of WindowController class:
+The WindowController Class is the controller that interacts with the CardCollection class. It demonstrates the use of arrays to manage a collection of objects.The WindowController class includes the begin method: When the program starts, the facedown cards along with the “New game” and “Cheat” button are shown. Each card has one symbol in it. This class also contains event handlers: with the onMouseClick method, the user can click on the card and play the game accordingly. (When the user clicks one time on a card, the symbol of that card is shown. When the user clicks on the second card, its symbol is also shown. If the two symbols are different, the 2 cards will turn facedown at the next click. If the two symbols are similar, the 2 cards disappear.) The user can also interact with the buttons by clicking on it. By including the GUI components (JButtons) along with the Listener and actionPerfomed method, the user can click on “New Game” button (The game re-starts with the fresh ordering of the cards) and “Cheat” Button (The game reveals all of the symbols of the cards).
+
+	2. Responsibilities of CardCollection class:
+The CardCollection class encapsulates the array of cards and provides an easy set of methods for the controller to work with. It demonstrates the use of a collection of objects to manage complexity.It first creates an empty array of cards and then adds cards to the collection.  It also includes other methods to manipulate the cards such as determining the card clicked on, facing the card up or erasing the card from the game.
+
+	3. Responsibilities of the Card class:
+The Card class defines and manages a single card of the game. It provides us the characteristics of a single card: Its rectangle shape, its color and its symbol.The Card class first constructs a new card. It also includes method to determine if the card has been click on and other methods to interact with its symbol (get the symbol of the card, show the symbol and hide the symbol). Finally, this card contains a method that erases a card from the game.
+
+	4. Laying out the cards in rows and columns:
+To lay out the cards in rows and columns (Specifically, 6 rows and 6 columns), I have to use nested loops. To draw a “wall” of cards, I need to draw rows of cards repeatedly, starting at a new location each time. I need 2 variables (cardX and cardY) to determine the x and y coordinates of the next card.The counter variables are rows and cardsInRow. The first counts the number of rows drawn so far, the second counts the number of cards drawn in the current row. Both of these variables are initialized to 0.The nested loops will include the inner loop and the outer loop. The inner loop will be responsible for drawing a single row of cards. After a card is drawn, cardX is changed to indicate the position of the next card of the current row. The counter cardsInRow is increased. The inner loop will create cards until the desired width (or 6 columns) has been reached.The outer loop is responsible for drawing 6 rows of cards. Each time the loop executes, a new row is drawn. Once it is drawn, cardY is changed to determine the y position of the next row. The counter variable row is increased as Ill.Before a new row is drawn by the inner loop, I reset cardsInRow and cardX to their initial values.=> Creating this class reminds me of the SimpleBrickWall and the Knitting classes.
+
+	5. 
+
+When there is 0 faceup card, the first click will show the symbol for the first card.When there is 1 faceup card, the second click will show the symbol for the second card.When there is 2 faceup card, the third click will either erase the last 2 cards clicked on (if they contain the same symbols) or turn the last 2 cards facedown (if they contain different symbols).To keep track of the information betIen mouse clicks, I will need two instance variables to hold information for the last 2 cards clicked on.  They can be called firstcard and secondcard. I will also need a method to compare the symbols.
+
+	6.  
+
+If I want to shuffle the cards, the symbols will need to be randomly assigned to a card and each symbol will have to appear on only 2 cards. I need to shuffle the symbols before creating the cards. First create an array containing 18 different pairs of 2 elements (36 elements in total because there are 6 x 6 = 36 cards in the game). Then, I create a random integer generator that covers the entire length of the array (0 to 35). Supposing the generator chooses 2 random elements x1 and x2. I will then need to switch the assignments of x1 and x2 so that the 2 positions at x1 and x2 will be swapped.At this point, only 2 positions have been swapped. Therefore, I’ll need to repeat this (in a loop) many times so that the cards look shuffled.
+
+	7. Sequences of steps proposed:
+- I will first start with creating the CardCollection, at this point this collection will be empty.- Then, I create the Card class that constructs cards with their characteristics (symbol and shape and color).- Add the cards to the collection. The cards will be shown faceup with their own symbols.- Hide the symbols so that the cards appear to be facedown.- Then create the Cheat button (JButton) and add its Listener so that when the user clicks on the card, the symbols are shown.- Create an onMouseClick method to show the symbol. Before that, determine which card has been clicked on. On the first click, the first card is shown, on the second click, the second class is shown.- On the third click, turn the last 2 cards facedown by hiding their symbols. At this point, the symbols are still the same.- I need to construct different symbols and then compare the symbols of the last 2 cards clicked on. If the symbols are the same, erase the 2 cards from the game. If the symbols are different, turn the 2 cards facedown.- Lastly, I need to shuffle the symbols so that their positions are randomly organized.

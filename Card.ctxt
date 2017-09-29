@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=symbol\ left\ top\ canvas
+comment0.target=Card(char,\ int,\ int,\ objectdraw.DrawingCanvas)
+comment0.text=\n\ Draw\ a\ single\ card\ with\ its\ characteristics.\n
+comment1.params=
+comment1.target=char\ getSymbol()
+comment1.text=\n\ Get\ the\ symbol\ on\ the\ card.\n
+comment2.params=
+comment2.target=void\ showSymbol()
+comment2.text=\n\ Show\ the\ symbol\ on\ the\ card.\n
+comment3.params=
+comment3.target=void\ hideSymbol()
+comment3.text=\n\ Hide\ the\ symbol\ on\ the\ card.\n
+comment4.params=
+comment4.target=void\ removeFromCanvas()
+comment4.text=\n\ Remove\ the\ card\ from\ the\ canvas.\n
+comment5.params=point
+comment5.target=boolean\ contains(objectdraw.Location)
+comment5.text=\n\ Check\ if\ the\ card\ contain\ the\ point\ of\ the\ mouse.\n\ @return\ true\ if\ point\ is\ on\ the\ card.\n\ @param\ point\ the\ location\ to\ check\ for\ containment.\n
+numComments=6
